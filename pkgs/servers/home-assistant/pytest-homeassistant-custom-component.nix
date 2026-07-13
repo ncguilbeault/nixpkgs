@@ -31,6 +31,10 @@ buildPythonPackage rec {
     hash = "sha256-Px4uPBn/drE9gbpszJDMwlaHNWk/dLvdmgqcgY770V0=";
   };
 
+  patches = [
+    ./syrupy-5.5-compat.patch
+  ];
+
   build-system = [ setuptools ];
 
   pythonRemoveDeps = true;
